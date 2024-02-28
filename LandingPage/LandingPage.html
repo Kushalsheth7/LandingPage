@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="LandingPage.css">
+</head>
+<body>
+    <div id="main">
+        
+        <div id="nav">
+            <img src="rrlogo.png" alt="">
+            <h5>Rolls Royce</h5>
+        </div>
+        <div id="part1">
+
+            
+        </div>
+        <div class="spirit"><img src="spirit.png" alt="" width="300px" height="250px"></div>
+        <div id="part2">
+       
+            <div class="car-animation car1"></div>
+            <div class="car-animation car2"></div>
+            <div class="car-animation car3"></div>
+            <div id="overlay"></div>
+            
+        </div>
+        
+        <div id="part3"></div>
+        <div id="text" class="text">
+            <h1 class="sliding-text">An </h1>
+            <h1 class="sliding-text">Inspiring</h1>
+            <h1 class="sliding-text">Greatness</h1>
+            <h1 class="sliding-text">Series</h1>
+        </div>
+        
+        <div id="small-img">
+            <div id="overlay"></div>
+        </div>
+        <div id="vertical-text">
+            <h1>Rolls Royce Presents</h1>
+        </div>
+    </div>
+    <script>
+        const part2 = document.getElementById('part2')
+        let currentImage = 1;
+        setInterval(() => {
+            currentImage = currentImage === 4 ? 1 : currentImage + 1;
+            part2.style.backgroundImage = `url(car-${currentImage}.png)`;
+        }, 9000); 
+        let smallImg=1
+        const small = document.getElementById('small-img');
+        setInterval(() => {
+            smallImg = smallImg === 4 ? 1 : smallImg + 1;
+            small.style.backgroundImage = `url(car-${smallImg}.png)`;
+        }, 9000); 
+    </script>
+</body>
+</html>
